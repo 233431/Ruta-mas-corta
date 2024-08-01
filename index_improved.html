@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas San Cristóbal</title>
+    <link rel="stylesheet" href="style_improved.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rutas San Cristóbal</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Agregar Puntos</h2>
+                <div class="form-row">
+                    <label for="vertices">Puntos</label>
+                    <input type="text" id="vertices" placeholder="Ingresa los puntos (separados por comas)">
+                </div>
+                <button type="button" id="addVerticesBtn">Agregar Puntos</button>
+            </div>
+            <div class="card">
+                <h2>Agregar Conexión</h2>
+                <div class="form-row">
+                    <label for="inicio">Punto de inicio</label>
+                    <input type="text" id="inicio" placeholder="Punto de inicio">
+                </div>
+                <div class="form-row">
+                    <label for="fin">Punto de fin</label>
+                    <input type="text" id="fin" placeholder="Punto de fin">
+                </div>
+                <div class="form-row">
+                    <label for="peso">Peso</label>
+                    <input type="number" id="peso" placeholder="Peso" value="1">
+                </div>
+                <button type="button" id="addAristaBtn">Agregar Conexión</button>
+            </div>
+            <div class="card">
+                <h2>Recorrido en Profundidad</h2>
+                <button type="button" id="dfsBtn">Realizar Recorrido</button>
+            </div>
+            <div class="card">
+                <h2>Camino Más Corto</h2>
+                <div class="form-row">
+                    <label for="dijkstraInicio">Punto de inicio</label>
+                    <input type="text" id="dijkstraInicio" placeholder="Punto de inicio">
+                </div>
+                <button type="button" id="dijkstraBtn">Buscar Camino</button>
+            </div>
+            <div class="card">
+                <h2>Resultado</h2>
+                <div id="salida" class="output-container"></div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="./src/controllers/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
